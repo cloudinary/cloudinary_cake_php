@@ -3,31 +3,13 @@ Cloudinary CakePHP plugin
 
 Cloudinary CakePHP plugin provides seemless integration of Cloudinary services with CakePHP framework for simple and efficient management of applications images
 
-Explore the [PhotoAlbumCake sample](https://github.com/cloudinary/cloudinary_cake_php/tree/master/samples/PhotoAlbumCake) for usage example.
+Explore the [PhotoAlbumCake sample](https://github.com/cloudinary/cloudinary_cake_php/tree/master/samples) for usage example.
 
 ## Requirements
 * PHP 5.3 or higher
 * CakePHP 2.x
 
 ## Installlation
-### Manual
-1. Create a CakePHP project
-1. Download cloudinary\_php from [here](https://github.com/cloudinary/cloudinary_php/tarball/master)
-1. Extract the cloudinary\_php archive into `vendors` library
-1. Download cloudinary\_cake_php from [here](https://github.com/cloudinary/cloudinary_cake_php/tarball/master)
-1. Extract the cloudinary\_cake\_php archive into `vendors` library
-1. Configure cloudinary
-    1. Environment variable - `export CLOUDINARY\_URL = "cloudinary://API_KEY:API_SECRET@CLOUD_NAME"` ([Check your settings in Cloudinary console](https://cloudinary.com/console))
-    1. Create `app/Config/CloudinaryPrivate.php` using `vendors/cloudinary_php/samples/PhotoAlbumCake/Config/CloudinaryPrivate.php.sample`
-1. Load the cloudinary plugin by adding the following lines to `app/Config/bootstrap.php`:
-
-        // Load plugin
-        CakePlugin::load('CloudinaryCake', array('bootstrap' => true, 'routes' => false,
-            'path' => ROOT . DS 'vendors' . DS 'cloudinary_php' . DS . 'cake_plugin' . DS . 'CloudinaryCake' . DS));
-
-        // required when using `CloudinaryPrivate.php` for cloudinary configuration
-        Configure::load('CloudinaryPrivate');
-        \Cloudinary::config(Configure::read('cloudinary'));
 
 ### Composer
 1. Create a new directory for myapp
@@ -68,6 +50,25 @@ Explore the [PhotoAlbumCake sample](https://github.com/cloudinary/cloudinary_cak
         composer require 'cloudinary/cloudinary_cake_php:>=1.0.0'
 
 1. Configure Cloudinary using the `CLOUDINARY_URL` environment variable, or the `Config/CloudinaryPrivate.php` configuration file
+
+### Manual
+1. Create a CakePHP project
+1. Download cloudinary\_php from [here](https://github.com/cloudinary/cloudinary_php/tarball/master)
+1. Extract the cloudinary\_php archive into `vendors` library
+1. Download cloudinary\_cake_php from [here](https://github.com/cloudinary/cloudinary_cake_php/tarball/master)
+1. Extract the cloudinary\_cake\_php archive into `vendors` library
+1. Configure cloudinary
+    1. Environment variable - `export CLOUDINARY\_URL = "cloudinary://API_KEY:API_SECRET@CLOUD_NAME"` ([Check your settings in Cloudinary console](https://cloudinary.com/console))
+    1. Create `app/Config/CloudinaryPrivate.php` using `vendors/cloudinary_php/samples/PhotoAlbumCake/Config/CloudinaryPrivate.php.sample`
+1. Load the cloudinary plugin by adding the following lines to `app/Config/bootstrap.php`:
+
+        // Load plugin
+        CakePlugin::load('CloudinaryCake', array('bootstrap' => true, 'routes' => false,
+            'path' => ROOT . DS 'vendors' . DS 'cloudinary_php' . DS . 'cake_plugin' . DS . 'CloudinaryCake' . DS));
+
+        // required when using `CloudinaryPrivate.php` for cloudinary configuration
+        Configure::load('CloudinaryPrivate');
+        \Cloudinary::config(Configure::read('cloudinary'));
 
 ## Usage
 
