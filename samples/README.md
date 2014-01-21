@@ -3,7 +3,7 @@ Cloudinary Cake PHP Sample Project
 
 Included in this folder is sample project for demonstrating the common Cloudinary's usage with Cake PHP.
 
-## Photo Album Cake
+## Photo Album
 
 This sample demonstrate the usage of the Cloudinary CakePHP plugin. It provides very similar functionalities as the basic Photo Album.
 
