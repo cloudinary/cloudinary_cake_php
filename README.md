@@ -9,7 +9,7 @@ Explore the [PhotoAlbumCake sample](https://github.com/cloudinary/cloudinary_cak
 * PHP 5.3 or higher
 * CakePHP 2.x
 
-## Installlation
+## Installation
 
 ### Composer
 1. Create a new directory for myapp
